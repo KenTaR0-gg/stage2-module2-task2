@@ -19,9 +19,9 @@ public class LoginServlet extends HttpServlet {
         boolean hasUserAttribute = (session != null && session.getAttribute("user") != null);
 
         if (hasUserAttribute) {
-            resp.sendRedirect("/login.jsp");
-        } else {
             resp.sendRedirect("/user/hello.jsp");
+        } else {
+            resp.sendRedirect("/login.jsp");
         }
     }
 
